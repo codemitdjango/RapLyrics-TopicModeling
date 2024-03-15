@@ -1,0 +1,1 @@
+Im Rahemn des Modul "Indrocution to Digital Humanities" im Studiengang Digital Humanities im ersten Semester (WiSe 2023/24) an der Universität Leipzig wurde dieses Projekt erstellt. Ziel war es Gemeinsamkeiten und Unterschiede zwischen deutschen und englischen Raplyrics mittels Topic Modeling zuanalysieren.
