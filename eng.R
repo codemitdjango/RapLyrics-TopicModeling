@@ -58,9 +58,3 @@ eng_top30terms <- sort(eng_tmResult$terms[eng_topicToViz, ], decreasing = TRUE)[
 eng_words <- names(eng_top30terms)
 eng_probabilities <- eng_top30terms
 wordcloud2(data.frame(eng_words, eng_probabilities), shuffle = FALSE)
-
-
-# Visualisierung
-eng_svd_tsne <- function(x) tsne(svd(x)$u)
-eng_json <- createJSON(phi = eng_beta, theta = eng_theta, doc.length = rowSums(eng_DTM), vocab = colnames(eng_DTM), term.frequency = colSums(eng_DTM), mds.method = eng_svd_tsne, plot.opts = list(xlab = "", ylab = ""))
-serVis(eng_json)

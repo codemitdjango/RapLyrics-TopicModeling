@@ -67,8 +67,3 @@ de_top30terms <- sort(de_tmResult$terms[de_topicToViz, ], decreasing = TRUE)[1:3
 de_words <- names(de_top30terms)
 de_probabilities <- sort(de_tmResult$terms[de_topicToViz, ], decreasing = TRUE)[1:30]
 wordcloud2(data.frame(de_words, de_probabilities), shuffle = FALSE)
-
-# Visualisierung
-de_svd_tsne <- function(y) tsne(svd(y)$u)
-de_json <- createJSON(phi = de_beta, theta = de_theta, doc.length = rowSums(de_DTM), vocab = colnames(de_DTM), term.frequency = colSums(de_DTM), mds.method = de_svd_tsne, plot.opts = list(xlab = "", ylab = ""))
-serVis(de_json)
